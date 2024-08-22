@@ -15,22 +15,22 @@ let gameOver; //used to present if the player has lost the game or not
 const boredomStateEl = document.getElementById('boredom-stat'); //connects to the id in the game date section
 const hungerStateEl = document.getElementById('hunger-stat'); //connects to the id in the game date section
 const sleepinessStateEl = document.getElementById('sleepiness-stat'); //connects to the id in the game date section
-console.log(boredomStateEl);
-console.log(hungerStateEl);
-console.log(sleepinessStateEl);
+// console.log(boredomStateEl);
+// console.log(hungerStateEl);
+// console.log(sleepinessStateEl);
 
 const playBtnEl = document.getElementById('play'); //connects to the id in the game interface section
 const feedBtnEl = document.getElementById('feed'); //connects to the id in the game interface section
 const sleepBtnEl = document.getElementById('sleep'); //connects to the id in the game interface section
-console.log(playBtnEl);
-console.log(feedBtnEl);
-console.log(sleepBtnEl);
+// console.log(playBtnEl);
+// console.log(feedBtnEl);
+// console.log(sleepBtnEl);
 
 const gameMessageEl = document.getElementById('message'); //connects to the id in the game display section
-console.log(gameMessageEl);
+// console.log(gameMessageEl);
 
 const resetBtnEl = document.getElementById('restart') //connects to the id in the game display section
-console.log(resetBtnEl);
+// console.log(resetBtnEl);
 
 /*-------------------------------- Functions --------------------------------*/
 function init (){
@@ -52,7 +52,7 @@ function runGame (){
     checkGameOver();
     render(); // Invoke render() to reflect the updated state in the UI
 };
-console.log();
+// console.log();
 
 function render(){
     boredomStateEl.textContent = state.boredom;
@@ -70,13 +70,13 @@ function updatestates(){
     state.hunger += Math.floor(Math.random()*4);
     state.sleepiness += Math.floor(Math.random()*4);
 };
-console.log(updatestates);
+// console.log(updatestates);
 
 function checkGameOver(){
     if (state.boredom >= 10 || state.hunger >= 10 || state.sleepiness >= 10)
         gameOver = true;
 };
-console.log(checkGameOver);
+// console.log(checkGameOver);
 
 function playBtnClick () {
     state.boredom = 0;
